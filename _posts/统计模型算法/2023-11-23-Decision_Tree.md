@@ -123,7 +123,7 @@ table(tree_train_pred, train_data$default)
 table(tree_test_pred, test_data$default)
 ```
 
-#### ③随机森林
+#### 随机森林
 ```R
 # 随机森林模型
 rf_model <- randomForest(default ~ ., data = train_data, importance=TRUE)
@@ -134,7 +134,7 @@ table(rf_train_pred, train_data$default)
 table(rf_test_pred, test_data$default)
 ```
 
-#### ④Adaboost
+#### Adaboost
 对于Adaboost模型，先将非数值项编码为数字，然后我们取n.trees=5000和interaction.depth=4作限制，阈值取0.5，
 
 代码：  
@@ -156,7 +156,7 @@ adaboost_test_pred <- ifelse(adaboost_test_pred > 0.5, 1, 0)
 table(adaboost_train_pred, train.num$default)
 table(adaboost_test_pred, test.num$default)
 ```
-#### ⑤XGboost
+#### XGboost
 > 此处代码的计算过程应有误，因为ROC并不正常
 {: .prompt-danger }
 ```R
@@ -174,7 +174,7 @@ table(as.numeric(xgboost_train_pred > 0.5), train_data$default)
 table(as.numeric(xgboost_test_pred > 0.5), test_data$default) 
 ```
 
-#### ⑥logistic回归
+#### logistic回归
 
 ```R
 # Logistic回归模型
@@ -263,5 +263,5 @@ auc_result
 5 Logistic回归 0.6445743
 ```
 ~~不要问为什么XGboost的ROC值怎么奇怪，因为就是错的~~
-### 请思考如何选择最优模型来预测  
+### 思考如何选择最优模型来预测  
 从roc和auc值综合考虑，Adaboost模型最优。
