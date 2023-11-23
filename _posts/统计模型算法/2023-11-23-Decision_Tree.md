@@ -92,7 +92,7 @@ attr(,"class")
 
 ## 问题2：组合模型分析
 1. 根据ISLR包中的Default数据集：p=100，n=100.将数据集按照6：4的比例划分训练集和测试集，分别利用决策树、随机森林、Adaboost、Adaboost和logistic回归对训练集构建模型，利用测试集对所构建的模型进行测试。比较这几个模型的训练集预测准确率及测试集的预测准确率。
-#### ①导入包和划分数据集：
+#### 导入包和划分数据集：
 ```R
 # 导入ISLR包
 library(ISLR)
@@ -111,7 +111,8 @@ train_index <- sample(1:nrow(Default), 0.6 * nrow(Default))
 train_data <- Default[train_index, ]
 test_data <- Default[-train_index, ]
 ```
-#### ②决策树：
+#### 决策树：
+
 ```R
 # 决策树模型
 tree_model <- tree(default ~ ., data = train_data)
@@ -121,6 +122,7 @@ tree_test_pred <- predict(tree_model, test_data,type="class")
 table(tree_train_pred, train_data$default)
 table(tree_test_pred, test_data$default)
 ```
+
 #### ③随机森林
 ```R
 # 随机森林模型
@@ -131,11 +133,11 @@ rf_test_pred <- predict(rf_model, test_data, type="class")
 table(rf_train_pred, train_data$default)
 table(rf_test_pred, test_data$default)
 ```
+
 #### ④Adaboost
 对于Adaboost模型，先将非数值项编码为数字，然后我们取n.trees=5000和interaction.depth=4作限制，阈值取0.5，
-> 此处代码的计算过程应有误，因为ROC并不正常
-{: .prompt-warning }
-代码：
+
+代码：  
 ```R
 # 将非数值项转换为0或1
 train.num <- train_data
@@ -155,6 +157,8 @@ table(adaboost_train_pred, train.num$default)
 table(adaboost_test_pred, test.num$default)
 ```
 #### ⑤XGboost
+> 此处代码的计算过程应有误，因为ROC并不正常
+{: .prompt-danger }
 ```R
 # XGBoost模型
 xgtrain_s <-Matrix::sparse.model.matrix(default~.-1, data = train_data)
@@ -171,6 +175,7 @@ table(as.numeric(xgboost_test_pred > 0.5), test_data$default)
 ```
 
 #### ⑥logistic回归
+
 ```R
 # Logistic回归模型
 logistic_model <- glm(default ~ ., data = train_data, family = "binomial")
@@ -181,7 +186,9 @@ logistic_test_pred <- ifelse(logistic_test_pred > 0.5, 1, 0)
 table(logistic_train_pred, train_data$default)
 table(logistic_test_pred, test_data$default)
 ```
-2. 利用ROC曲线比较模型的好坏，并计算模型的AUC值。
+
+### 利用ROC曲线比较模型的好坏，并计算模型的AUC值。  
+
 ```R
 train_accuracy <- function(pred, actual) {
   mean(pred == actual)
@@ -235,7 +242,6 @@ auc_logistic <- auc(roc_curve)
 # 打印结果
 auc_result <- data.frame(Model = models, AUC = c(auc_tree, auc_rf, auc_adaboost, auc_xgboost, auc_logistic))
 auc_result
-
 ```
 
 最后输出结果是：
@@ -256,6 +262,6 @@ auc_result
 4      XGBoost 0.8246152
 5 Logistic回归 0.6445743
 ```
-~~不要问题~~
+~~不要问为什么XGboost的ROC值怎么奇怪，因为就是错的~~
 3. 请思考如何选择最优模型来预测
 从roc和auc值综合考虑，Adaboost模型最优。
