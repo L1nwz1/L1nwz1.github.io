@@ -1,8 +1,8 @@
 ---
 title: 机器学习：决策树和组合算法
 date: 2023-11-23 21:57 +0800
-categories: [统计模型算法]
-tags: [统计, 机器学习]     # TAG names should always be lowercase
+categories: [统计]
+tags: [R, 机器学习]     # TAG names should always be lowercase
 ---
 ## 前言
 以下是课程作业总结

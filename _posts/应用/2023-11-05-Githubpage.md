@@ -1,8 +1,8 @@
 ---
 title: 关于我github page踩过的坑
 date: 2023-11-05 14:50 +0800
-categories: [通用]
-tags: [网站,博客]     # TAG names should always be lowercase
+categories: [应用]
+tags: [网站]     # TAG names should always be lowercase
 ---
 
 ## 前言
