@@ -2,7 +2,7 @@
 title: 如何部署github page静态博客以及过程中踩过的坑
 date: 2023-11-05 14:50 +0800
 categories: [应用]
-tags: [网站]     # TAG names should always be lowercase
+tags: [网站,windows]     # TAG names should always be lowercase
 ---
 
 ## 前言

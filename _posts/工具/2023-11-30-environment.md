@@ -2,7 +2,7 @@
 title: 我的常用软件和工作环境
 date: 2023-11-30 13:51 +0800
 categories: [工具]
-tags: [推荐]     # TAG names should always be lowercase
+tags: [推荐，windows]     # TAG names should always be lowercase
 ---
 
 ## 系统环境/工具
@@ -53,7 +53,9 @@ root@xxx:#
 ssh插件，在vscode中编辑远程代码。
 
 ## 网站工具
-JerkII+github page，部署过程请看[如何部署github page静态博客以及过程中踩过的坑](https://l1nwz1.cc/posts/Githubpage/)。
+
+### 网站以及评论功能的搭建
+JerkII+github page+waline，部署过程请看[如何部署github page静态博客以及过程中踩过的坑](https://l1nwz1.cc/posts/Githubpage/)。
 
 ### 数学公式显示
 采用MathJax显示公式，由于markdown的kramdown语法和MathJax语法有所冲突，需要修改一部分内容。下面介绍的是JerkII下的MathJax配置：  
