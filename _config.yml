@@ -13,12 +13,12 @@ timezone: Asia/Shanghai
 
 # jekyll-seo-tag 设置 › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # --------------------------
-title: L1nwz1       # 主标题
+title: L1nwz1's blog      # 主标题
 
-tagline: 享受当下的美好~ # 副标题
+tagline: 专注于当下的美好~ # 副标题
 
 description: >- # 由 seo meta 和 atom feed 使用
-  L1nwz1's blog
+  L1nwz1的个人博客
 
 # 填入你的网站的协议和域名.
 # 例如，'https://username.github.io'，注意不要以 '/' 结尾。
