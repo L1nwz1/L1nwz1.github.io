@@ -11,21 +11,27 @@
   use_iconfont: true
   name: 此博主的 Github 仓库
   link: https://github.com/L1nwz1/L1nwz1.github.io
--
-  icon: icon-cryo
-  use_iconfont: true
-  name: 此博主的 Bilibili 主页
-  link: https://space.bilibili.com/22519503
--
-  icon: icon-hydro
-  use_iconfont: true
-  name: 此博主的 Steam 主页
-  link: https://steamcommunity.com/profiles/76561198133896178/
+# -
+#   icon: icon-cryo
+#   use_iconfont: true
+#   name: 此博主的 Bilibili 主页
+#   link: https://space.bilibili.com/22519503
+# -
+#   icon: icon-hydro
+#   use_iconfont: true
+#   name: 此博主的 Steam 主页
+#   link: https://steamcommunity.com/profiles/76561198133896178/
 -
   icon: icon-geo
   use_iconfont: true
-  name: nihil的个人博客
+  name: nihil's blog
   link: https://nihil.cc/
+
+-
+  icon: icon-electro
+  use_iconfont: true
+  name: noodlefighter's blog
+  link: https://noodlefighter.com/
 
 # 在下面添加更多外部链接
 # -

@@ -97,5 +97,5 @@ P_{30} & P_{31} & P_{32} & ... \\
 ```
 这样可以保证矩阵每一行的换行。
 ### wiki
-mkdocs，目前还在建设中，部署于Vercel
+mkdocs，部署于github page，[L1nwz1's wiki](https://l1nwz1.cc/wiki/).
 
