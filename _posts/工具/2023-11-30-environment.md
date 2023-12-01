@@ -2,7 +2,7 @@
 title: 我的常用软件和工作环境
 date: 2023-11-30 13:51 +0800
 categories: [工具]
-tags: [推荐，windows]     # TAG names should always be lowercase
+tags: [推荐,windows]     # TAG names should always be lowercase
 ---
 
 ## 系统环境/工具
