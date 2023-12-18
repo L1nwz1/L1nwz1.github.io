@@ -7,10 +7,15 @@
 #   automatic_name: true
 #   link: https://996.icu
 -
-  icon: icon-anemo
+  icon: icon-GitHub
   use_iconfont: true
   name: 此博主的 Github 仓库
   link: https://github.com/L1nwz1/L1nwz1.github.io
+-
+  icon: icon-bangumi
+  use_iconfont: true
+  name: 此博主的 bangumi 账号
+  link: https://bangumi.tv/user/828440
 # -
 #   icon: icon-cryo
 #   use_iconfont: true
